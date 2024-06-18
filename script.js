@@ -32,6 +32,11 @@ function gotoPagefour() {
     document.getElementById("four").scrollIntoView();
 }
 
+function randomInt(max) {
+    return Math.floor(Math.random() * max);
+    
+}
+
 let tiles_container = document.getElementsByClassName("tiles-container");
 let tile = document.getElementById("tile");
 let total_tiles = 300;
@@ -40,7 +45,7 @@ function generateTiles() {
     for (i = 1; i < total_tiles; i++) {
         const new_tile = tile.cloneNode(true);
         tiles_container[0].appendChild(new_tile);
-        let random_delay = Math.floor(Math.random() * 5);
+        let random_delay = randomInt(5);
         if (random_delay == 0) {
             new_tile.classList.toggle("animation-delay-fastest");
         } else if (random_delay == 1) {
@@ -52,12 +57,35 @@ function generateTiles() {
         } else if (random_delay == 4) {
             new_tile.classList.toggle("animation-delay-slowest");
         }
+
+        let random_tile_pic = randomInt(10);
+        if (random_tile_pic == 0) {
+            new_tile.src = "tile-01.png"
+        } else if (random_tile_pic == 1) {
+            new_tile.src = "tile-02.png"
+        } else if (random_tile_pic == 2) {
+            new_tile.src = "tile-03.png"
+        } else if (random_tile_pic == 3) {
+            new_tile.src = "tile-04.png"
+        } else if (random_tile_pic == 4) {
+            new_tile.src = "tile-05.png"
+        } else if (random_tile_pic == 5) {
+            new_tile.src = "tile-06.png"
+        } else if (random_tile_pic == 6) {
+            new_tile.src = "tile-07.png"
+        } else if (random_tile_pic == 7) {
+            new_tile.src = "tile-08.png"
+        } else if (random_tile_pic == 8) {
+            new_tile.src = "tile-09.png"
+        } else if (random_tile_pic == 9) {
+            new_tile.src = "tile-10.png"
+        }
     }
 }
 
 setTimeout(function() {
     topFunction();
-  }, 100);
+  }, 150);
 
 function topFunction() {
     document.body.scrollTop = 0; // For Safari
