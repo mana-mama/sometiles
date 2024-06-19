@@ -200,9 +200,11 @@ section {
 
     height: 100vh;
     width: 100%;
+
+    background: var(--color_6);
 }
 
-section.one {
+/* section.one {
     background-color: var(--color_1);
 }
 
@@ -216,7 +218,7 @@ section.three {
 
 section.four {
     background-color: var(--color_4);
-}
+} */
 
 .content {
     transform: translateX(0%);
@@ -226,46 +228,50 @@ section.four {
 
 .one .content {
     background: var(--color_1);
-
+    border: 1px solid var(--color_5);
+    
     top: 50%;
     left: 25%;
     transform: translateX(-25%) translateY(-50%);
     width: 70%;
     padding: 5rem;
-
+    
     font-size: 3rem;
     color: var(--color_5);
 }
 
 .two .content {
     background: var(--color_2);
-
+    border: 1px solid var(--color_6);
+    
     top: 50%;
     right: 25%;
     transform: translateX(25%) translateY(-50%);
     width: 70%;
     padding: 5rem;
-
+    
     font-size: 3rem;
     text-align: end;
 }
 
 .three .content {
     background: var(--color_3);
-
+    border: 1px solid var(--color_6);
+    
     top: 50%;
     left: 25%;
     transform: translateX(-25%) translateY(-50%);
     width: 70%;
     padding: 5rem;
-
+    
     font-size: 3rem;
     color: var(--color_6);
 }
 
 .four .content {
     background: var(--color_4);
-
+    border: 1px solid var(--color_6);
+    
     top: 50%;
     right: 25%;
     transform: translateX(25%) translateY(-50%);
@@ -312,8 +318,17 @@ section.four {
 }
 
 video {
-    width: 100%;
+    position: absolute;
     aspect-ratio: 1/1;
+    z-index: 6;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+
+    width: 30%;
+    padding: 2rem;
+    background: var(--color_2);
+    border: 1px solid var(--color_6);
 }
 
 .tile-box .img-box {
@@ -406,6 +421,13 @@ video {
     
     .two .content {
         width: 85%;
+        top: 40%;
+    }
+    
+    video {
+        left: 30%;
+        transform: translateX(-30%);
+        width: 60%;
     }
 }
 

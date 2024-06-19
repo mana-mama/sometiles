@@ -60,25 +60,35 @@ function generateTiles() {
 
         let random_tile_pic = randomInt(10);
         if (random_tile_pic == 0) {
-            new_tile.src = "tile-01.png"
+            new_tile.src = "tile-01.webp"
+            new_tile.atl = "gray tile"
         } else if (random_tile_pic == 1) {
-            new_tile.src = "tile-02.png"
+            new_tile.src = "tile-02.webp"
+            new_tile.atl = "yellow tile"
         } else if (random_tile_pic == 2) {
-            new_tile.src = "tile-03.png"
+            new_tile.src = "tile-03.webp"
+            new_tile.atl = "blue tile"
         } else if (random_tile_pic == 3) {
-            new_tile.src = "tile-04.png"
+            new_tile.src = "tile-04.webp"
+            new_tile.atl = "red tile"
         } else if (random_tile_pic == 4) {
-            new_tile.src = "tile-05.png"
+            new_tile.src = "tile-05.webp"
+            new_tile.atl = "pale brown tile"
         } else if (random_tile_pic == 5) {
-            new_tile.src = "tile-06.png"
+            new_tile.src = "tile-06.webp"
+            new_tile.atl = "pale gray tile"
         } else if (random_tile_pic == 6) {
-            new_tile.src = "tile-07.png"
+            new_tile.src = "tile-07.webp"
+            new_tile.atl = "brown tile"
         } else if (random_tile_pic == 7) {
-            new_tile.src = "tile-08.png"
+            new_tile.src = "tile-08.webp"
+            new_tile.atl = "white tile"
         } else if (random_tile_pic == 8) {
-            new_tile.src = "tile-09.png"
+            new_tile.src = "tile-09.webp"
+            new_tile.atl = "green tile"
         } else if (random_tile_pic == 9) {
-            new_tile.src = "tile-10.png"
+            new_tile.src = "tile-10.webp"
+            new_tile.atl = "black tile"
         }
     }
 }
