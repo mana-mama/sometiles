@@ -1,21 +1,18 @@
 window.addEventListener("scroll", (event) => {
     let scroll = this.scrollY;
-    if (Number.isInteger(scroll/window.innerHeight)) {
-        let dot_num = scroll/window.innerHeight;
-        document.getElementById("0").classList.remove("active");
-        document.getElementById("1").classList.remove("active");
-        document.getElementById("2").classList.remove("active");
-        document.getElementById("3").classList.remove("active");
-        
-        if (dot_num > 2) {
-            document.getElementById("3").classList.toggle("active");
-        } else if (dot_num > 1) {
-            document.getElementById("2").classList.toggle("active");
-        } else if (dot_num > 0) {
-            document.getElementById("1").classList.toggle("active");
-        } else if (dot_num == 0) {
-            document.getElementById("0").classList.toggle("active");
-        }
+    let dot_num = Math.round(scroll/window.innerHeight);
+    document.getElementById("0").classList.remove("active");
+    document.getElementById("1").classList.remove("active");
+    document.getElementById("2").classList.remove("active");
+    document.getElementById("3").classList.remove("active");
+    if (dot_num == 3) {
+        document.getElementById("3").classList.toggle("active");
+    } else if (dot_num == 2) {
+        document.getElementById("2").classList.toggle("active");
+    } else if (dot_num == 1) {
+        document.getElementById("1").classList.toggle("active");
+    } else if (dot_num == 0) {
+        document.getElementById("0").classList.toggle("active");
     }
 });
 
